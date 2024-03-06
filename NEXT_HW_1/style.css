@@ -1,25 +1,29 @@
 body {
-  background-color: #222;
+  padding: 30px 50px;
+  background-color: #E0D5C6;
+}
+a{
+  color: #000;
 }
 a:visited {
-  color: #222;
+  color: #f7941e;
 }
 mark {
   color: #222;
   background: #f7941e;
 }
 li {
-  color: rgba(255, 255, 255, 1);
+  color: #000;
 }
 img {
   width: 100%;
 }
 .container {
-  width: 88%;
-  color: white;
+  width: 80%;
+  color: #000;
   /* background-color: aliceblue; */
   margin: 0 auto;
-  border: 1px solid #f7941e;
+  border: 1px solid #7C0019;
   padding: 40px;
   border-radius: 20px;
   margin: 60px;
