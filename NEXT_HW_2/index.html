@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고려대 창업학회 NEXT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Josefin Sans-->
+    <link rel="stylesheet" href="./style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+  <style>
+    .fa-moon{
+        color: white;
+    }
+    .fa-lightbulb{
+        color: black;
+    }
+  </style>
+</head>
+<body class="light-theme" id="content">
+    <div class="container main">
+        <div class="header">
+            <i class="fas fa-angle-left" style="font-size: 24px;"></i>
+            <h1 class="title">next_koreauniv</h1>
+            <div class="relative">
+                <i class="far fa-bell absolute" style="font-size: 24px; padding-right: 6px;"></i>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <div class="body">
+            <div class="body-top">
+                <div class="img">
+                    <img src="./img/next_logo.png" alt="">
+                    <div class="img-border"></div>
+                </div> 
+                <div class="insta-info">
+                    <div>
+                        <div class="bold text-center">26</div>
+                        <div>게시물</div>
+                    </div>
+                    <div>
+                        <div class="bold text-center">383</div>
+                        <div>팔로워</div>
+                    </div>
+                    <div>
+                        <div class="bold text-center">5</div>
+                        <div>팔로잉</div>
+                    </div>
+                </div>    
+            </div>
+            <div class="body-mid">
+                <p>고려대 소프트웨어 창업학회 <b>NEXT</b></p>
+                <p><a href="https://www.instagram.com/next_koreauniv/">커뮤니티</a></p>
+                <p>Accelerate your potential.</p>
+                <p>번역 보기</p>
+                <p><a href="https://next-ku.com" target="_blank"><i class="fas fa-paperclip"></i> next-ku.com</a></p>
+                <div class="container">
+                    <div class="circles relative">
+                        <div class="circle absolute"></div>
+                        <div class="circle absolute"></div>
+                        <div class="circle absolute"></div>
+                    </div>
+                    <div class="followed-by">
+                        <p>
+                            <b>tonyjung_01</b>님, <b>jiho_jn</b>님, <b>b._.fmoon_</b>님 외 <b>12명</b>이 팔로우합니다
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="container buttons">
+                    <div>팔로잉 <i class="fas fa-chevron-down"></i></div>
+                    <div>메시지</div>
+                    <div>사람</div>
+                </div>
+            </div>
+            <div class="body-sticky"></div>
+            <div class="body-bottom"></div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    
+    
+    
+    <div id="toggle-button">
+        <i class="far fa-moon" id="toggleIcon"></i>
+        <!-- <i class="far fa-lightbulb" id="lightbulb"></i> -->
+    </div>
+</body>
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const content = document.getElementById('content');
+        const toggleicon = document.getElementById('toggleIcon');
+        toggleButton.addEventListener('click', () => {
+            content.classList.toggle('light-theme');
+            content.classList.toggle('dark-theme');
+            if(toggleicon.classList.contains('fa-moon')){
+                toggleicon.classList.replace('fa-moon','fa-lightbulb');
+            }
+            else{
+                toggleicon.classList.replace('fa-lightbulb','fa-moon');
+            }
+        });
+    </script>
+</html>
