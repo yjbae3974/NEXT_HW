@@ -254,6 +254,7 @@ a:hover{
 
 .body-mid .circles{
     width: 20%;
+    min-width: 60px;
     height: 26px;
 }
 .body-mid .circles .circle{
@@ -426,6 +427,7 @@ a:hover{
 
 .body-bottom .grid img{
     width: 100%;
+    min-width: 76.8px;
 }
 
 section .relative .fa-copy.absolute{
