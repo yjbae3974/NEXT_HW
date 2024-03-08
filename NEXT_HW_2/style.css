@@ -84,6 +84,11 @@ a:hover{
     position: absolute;
 }
 
+.sticky{
+    position: sticky;
+    top: 0%;
+}
+
 .bold{
     font-weight: bold;
 }
@@ -111,8 +116,7 @@ a:hover{
     /* background-color: black; */
     border-radius: 0.5em;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    transition: box-shadow 0.5s ease;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease;
     /* margin: 0 auto; */
 }
 
@@ -124,7 +128,7 @@ a:hover{
     background-color: black;
 }
 .container.main:hover{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .light-theme #toggle-button{
@@ -153,11 +157,15 @@ a:hover{
 
 .header{
     flex-grow: 1;
+    width: calc(100% - 32px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 48px;
-    position: sticky;
+    height: 3rem;
+}
+
+.header.absolute{
+    top:0%;
 }
 
 .header i{
@@ -172,6 +180,13 @@ a:hover{
 .relative .fa-bell{
     left: -200%;
     top: -15%;
+}
+
+.body{
+    margin-top: 3rem;
+    margin-bottom: 4.4rem;
+    max-height: calc(100% - 7.4rem);
+    overflow: scroll;
 }
 
 .body-top{
@@ -355,14 +370,24 @@ a:hover{
     
 }
 
+.body .sticky{
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.dark-theme .body .sticky{
+    background-color: black;
+}
+
 .body-sticky{
     display: flex;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .body-sticky > a{
     width: 50%;
     text-align: center;
+    padding-bottom: 0.25rem;
 }
 
 .body-sticky .navigation{
@@ -389,7 +414,7 @@ a:hover{
 }
 
 .body-bottom{
-    overflow: scroll;
+    /* overflow: scroll; */
     max-height: 220px;
 }
 
@@ -444,6 +469,7 @@ section .relative .fa-thumbtack.absolute{
     height: 2.4rem;
     align-items: center;
     justify-content: space-around;
+    transition: background-color 0.5s ease-in-out;
     
 }
 
@@ -467,4 +493,8 @@ section .relative .fa-thumbtack.absolute{
     bottom: 1%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.dark-theme .iphone-bar{
+    background-color: white;
 }
