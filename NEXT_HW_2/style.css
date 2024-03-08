@@ -3,6 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans';
 }
 
 button{
@@ -179,7 +180,7 @@ a:hover{
 
 .relative .fa-bell{
     left: -200%;
-    top: -15%;
+    top: -5%;
 }
 
 .body{
