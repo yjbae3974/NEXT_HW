@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>고려대 창업학회 NEXT</title>
+    <link rel="icon" href="./img/Instagram_icon.png">
+    <!--instagram_icon-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <!--Josefin Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rock+3D&display=swap" rel="stylesheet">
+    <!--Rock 3d-->
     <link rel="stylesheet" href="./style.css">
     <link
     rel="stylesheet"
@@ -23,7 +29,7 @@
   </style>
 </head>
 <body class="light-theme" id="content">
-    <div class="container main">
+    <div class="container main relative">
         <div class="header">
             <i class="fas fa-angle-left" style="font-size: 24px;"></i>
             <h1 class="title">next_koreauniv</h1>
@@ -73,15 +79,87 @@
                     </div>
                 </div>
                 <div class="container buttons">
-                    <div>팔로잉 <i class="fas fa-chevron-down"></i></div>
+                    <div>팔로잉 <i class="fas fa-chevron-down" style="font-size: 0.5rem;"></i></div>
                     <div>메시지</div>
-                    <div>사람</div>
+                    <div><i class="fas fa-user-plus"></i></div>
+                </div>
+                <div class="container highlights">
+                    <div class="highlight">
+                        <div class="border">
+                            <div class="circle">
+                                FAQ
+                            </div>
+                        </div>
+                        FAQ
+                    </div>
+                    <div class="highlight">
+                        <div class="border">
+                            <div class="circle">
+                                <!-- <img src="./img/story_2.jpeg" alt=""> -->
+                            </div>
+                        </div>
+                        2023
+                    </div>
+                    
                 </div>
             </div>
-            <div class="body-sticky"></div>
-            <div class="body-bottom"></div>
+            <nav class="body-sticky relative">
+                    <a id="feeds"><i class="fas fa-th"></i></a>
+                    <a id="tagged"><i class="fas fa-user-plus"></i></a>
+                    <div class="navigation absolute left-0" id="navigation"></div>
+            </nav>
+            <div class="body-bottom">
+                <section class="grid" id="feeds-img">
+                    <div class="relative">
+                        <img src="./img/1.jpg" alt="">
+                        <i class="fas fa-thumbtack absolute"></i>
+                    </div>
+                    <div class="relative">
+                        <img src="./img/2.jpg" alt="">
+                        <i class="fas fa-thumbtack absolute"></i>
+                    </div>
+                    <div class="relative">
+                        <img src="./img/3.jpg" alt="">
+                        <i class="fas fa-thumbtack absolute"></i>
+                    </div>
+                    <div class="relative">
+                        <img src="./img/4.jpeg" alt="">
+                        <i class="fas fa-copy absolute"></i>
+                    </div>
+                    <div class="relative">
+                        <img src="./img/5.jpeg" alt="">
+                        <i class="fas fa-copy absolute"></i>
+                    </div>
+                    <div class="relative">
+                        <img src="./img/6.jpeg" alt="">
+                        <i class="fas fa-copy absolute"></i>
+                    </div>   
+                </section>
+                <section class="grid none" id="tagged-img">
+                    <div class="tagged-elements">1</div>
+                    <div class="tagged-elements">2</div>
+                    <div class="tagged-elements">3</div>
+                    <div class="tagged-elements">4</div>
+                    <div class="tagged-elements">5</div>
+                    <div class="tagged-elements">6</div>
+                    <div class="tagged-elements">7</div>
+                    <div class="tagged-elements">8</div>
+                    <div class="tagged-elements">9</div>
+                    <div class="tagged-elements">10</div>
+                    <div class="tagged-elements">11</div>
+                    <div class="tagged-elements">12</div>
+                </section>
+            </div>
         </div>
-        <div class="footer"></div>
+        <div class="footer container absolute">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-search"></i>
+            <i class="far fa-plus-square"></i>
+            <i class="fas fa-video"></i>
+            <i class="fas fa-user"></i>
+
+        </div>
+        <div class="iphone-bar absolute"></div>
     </div>
     
     
@@ -95,6 +173,16 @@
         const toggleButton = document.getElementById('toggle-button');
         const content = document.getElementById('content');
         const toggleicon = document.getElementById('toggleIcon');
+        const feeds = document.getElementById('feeds');
+        const feeds_img = document.getElementById('feeds-img');
+        const tagged = document.getElementById('tagged');
+        const tagged_img = document.getElementById('tagged-img');
+        const navigation = document.getElementById('navigation');
+        const feedImg = document.createElement('img');
+
+
+
+
         toggleButton.addEventListener('click', () => {
             content.classList.toggle('light-theme');
             content.classList.toggle('dark-theme');
@@ -103,6 +191,26 @@
             }
             else{
                 toggleicon.classList.replace('fa-lightbulb','fa-moon');
+            }
+        });
+        feeds.addEventListener('click', ()=>{
+            if(navigation.classList.contains('left-50')){
+                navigation.classList.toggle('left-0');
+                navigation.classList.toggle('left-50');
+            }
+            if(feeds_img.classList.contains('none')){
+                feeds_img.classList.toggle('none');
+                tagged_img.classList.toggle('none');
+            }
+        });
+        tagged.addEventListener('click', ()=>{
+            if(navigation.classList.contains('left-0')){
+                navigation.classList.toggle('left-0');
+                navigation.classList.toggle('left-50');
+            }
+            if(tagged_img.classList.contains('none')){
+                feeds_img.classList.toggle('none');
+                tagged_img.classList.toggle('none');
             }
         });
     </script>

@@ -24,16 +24,32 @@ a{
     color: rgb(77, 109, 199);
 }
 
+.light-theme nav a{
+    color: black
+}
+
 .dark-theme a{
     color: rgba(224,241,255,1);
+}
+
+.dark-theme nav a{
+    color: white;
 }
 
 .light-theme a:visited{
     color: rgb(77, 109, 199);
 }
 
+.light-theme nav a:visited{
+    color: black;
+}
+
 .dark-theme a:visited{
     color: rgba(224,241,255,1);
+}
+
+.dark-theme nav a:visited{
+    color: white;
 }
 
 a:hover{
@@ -50,6 +66,10 @@ a:hover{
 
 .container{
     display: flex;
+}
+
+.grid{
+    display: grid;
 }
 
 .main.container > div{
@@ -77,10 +97,14 @@ a:hover{
     position: relative;
     top: -1px;
 }
+
+.none{
+    display: none;
+}
 .container.main{
     display: block;
-    top: 50%;
-    left: 50%;
+    /* top: 50%;
+    left: 50%; */
     flex-grow: 1;
     max-width: 376px;
     aspect-ratio: 9/16;
@@ -258,12 +282,22 @@ a:hover{
 .body-mid .container.buttons div{
     font-size: 0.75rem;
     cursor: pointer;
-    border-radius: .2rem;
+    border-radius: .3rem;
     background-color: rgb(223, 223, 223);
     margin: 0px .2rem;
     text-align: center;
     padding: 0.4rem 0rem;
+    transition: background-color 0.5s ease;
 }
+
+.dark-theme .body-mid .container.buttons div{
+    background-color: rgb(67, 66, 66);
+}
+
+.body-mid .container.buttons div:hover{
+    background-color: rgb(189, 189, 189);
+}
+
 .body-mid .container.buttons div:nth-child(1){
     flex-grow: 5;
 }
@@ -274,4 +308,163 @@ a:hover{
 
 .body-mid .container.buttons div:nth-child(3){
     flex-grow: 1;
+}
+
+.highlight:first-child{
+    margin-right: 1rem;
+}
+
+.highlights .border{
+    border: 1.2px solid rgb(97, 97, 97);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.highlights .border .circle{
+    height: 3rem;
+    width: 3rem;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.highlight{
+    text-align: center;
+    font-weight: bold;
+}
+
+.highlights .highlight:first-child .border .circle{
+    /* margin-right: 1rem; */
+    background-color: rgb(39, 39, 39);
+    font-family: 'Josefin Sans';
+    font-style: italic;
+    color: #F6941F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.highlights .highlight:last-child .border .circle{
+    background-image: url('./img/story_2.jpeg');
+    background-position: 25% 75%;
+    object-fit: cover;
+    
+    
+}
+
+.body-sticky{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.body-sticky > a{
+    width: 50%;
+    text-align: center;
+}
+
+.body-sticky .navigation{
+    bottom: -2px;
+    width: 50%;
+    height: 2px;
+    transition: left 0.5s ease;
+}
+
+.left-0{
+    left: 0%;
+}
+
+.left-50{
+    left: 50%;
+}
+
+.light-theme .body-sticky .navigation{
+    background-color: black;
+}
+
+.dark-theme .body-sticky .navigation{
+    background-color: white;
+}
+
+.body-bottom{
+    overflow: scroll;
+    max-height: 220px;
+}
+
+.body-bottom .grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+
+}
+
+.body-bottom .grid img{
+    width: 100%;
+}
+
+section .relative .fa-copy.absolute{
+    top: 10%;
+    right: 10%;
+    color: wheat;
+}
+
+section .relative .fa-thumbtack.absolute{
+    top: 10%;
+    right: 10%;
+    color: white;
+}
+
+.body-bottom .grid > div.tagged-elements{
+    aspect-ratio: 1/1;
+    font-family: 'Rock 3D';
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-bottom .grid > div.tagged-elements:nth-child(even){
+    background-color: #F6941F;
+    color: black;
+}
+
+.body-bottom .grid > div.tagged-elements:nth-child(odd){
+    background-color: black;
+    color:#F6941F;
+}
+
+.main.container > .footer.container{
+    padding: 0px;
+    padding-bottom: 2rem;
+}
+.footer.container{
+    bottom: 0%;
+    width: 100%;
+    height: 2.4rem;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.footer.container i{
+    font-size: 1.2rem;
+}
+
+.light-theme .footer.container{
+    background-color: white;
+}
+
+.dark-theme .footer.container{
+    background-color: black;
+}
+
+.iphone-bar{
+    width: 30%;
+    background-color: black;
+    height: 4px;
+    border-radius: 1rem;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
 }
