@@ -2,9 +2,22 @@
     display: flex;
 }
 
+.space-between{
+    justify-content: space-between;
+}
+
 .space-around{
     justify-content: space-around;
 }
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -155,5 +168,50 @@ main > .header div:nth-child(2) > img:nth-child(3){
 
 .body .body-banners:nth-child(3) > i{
     color: #AEB2B8;
+    cursor: pointer;
+}
+
+.body-banners .bank-info.flex{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.body-banners .bank-info.flex .absolute.circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #2E82FA;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    right: 0%;
+}
+
+.body-banners .bank-info.flex .flex.space-between{
+    flex-grow: 1;
+}
+
+.body-banners .bank-info.flex .flex.space-between p{
+    margin: 6px;
+    margin-left: 16px;
+}
+.body-banners .bank-info.flex .flex.space-between p:nth-child(2){
+    font-weight: 600;
+}
+
+.body-banners .bank-info.flex .flex.space-between .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F3F5;
+    color: #4D5360;
+    padding: 2px 14px;
+    margin: 6px 0px;
+    font-size: 0.8em;
+    border-radius: 0.5em;
+    font-weight: 600;
     cursor: pointer;
 }
