@@ -1,0 +1,159 @@
+.flex{
+    display: flex;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* position: relative; */
+}
+
+main{
+    width: 400px;
+    aspect-ratio: 9 / 19.5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4em;
+    border: 8px solid black;
+    position: relative;
+}
+
+main > div{
+    padding: 0px 16px;
+}
+
+main .top-bar{
+    padding: 0px;
+    position: absolute;
+    width: 30%;
+    aspect-ratio: 10 / 2.8;
+    background-color: black;
+    border-radius: 2em;
+    top: 0.8em;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+main .bottom-bar{
+    padding: 0px;
+    position: absolute;
+    width: 40%;
+    background-color: black;
+    height: 8px;
+    border-radius: 1rem;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main > .header{
+    padding: 0.75em 1.6em 0.9em 2em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+main > .header div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+main > .header div:nth-child(2){
+    display: flex;
+    align-items: center;
+    
+}
+
+main > .header div:nth-child(2) > img{
+    width: 1.6em;
+
+}
+
+main > .header div:nth-child(2) > img:nth-child(3){
+    padding-left: 0.4em;
+}
+
+.toss-body-top{
+    padding: 0.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toss-body-top > img{
+    width: 100px;
+}
+
+.toss-body-top > div > i{
+    font-size: 1.3em;
+    color: rgb(150, 150, 150);
+    margin-left: 1em;
+}
+
+.body .body-banners{
+    background-color: white;
+    border-radius: 1em;
+    padding: 1.3em;
+    margin: 0.8em 0em;
+}
+
+.body .body-banners > .flex:first-child{
+    justify-content: space-between;
+}
+
+.body .body-banners .emoji{
+    text-align: center;
+     font-size: 60px;
+     margin: 0.7em 0px;
+}
+
+.body .body-banners:nth-child(2) > div:nth-child(3){
+    color: gray;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.body .body-banners:nth-child(2) > div:nth-child(3) b{
+    color: #4479CA;
+}
+
+.body .body-banners:nth-child(2) > div:nth-child(4).flex{
+    padding: 1em 0px 0.5em 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button{
+    padding: .8em 3.5em;
+    border-radius: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button:first-child{
+    color: #3182F7;
+    background-color: #E9F3FD;
+}
+.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button:nth-child(2){
+    color: #E9F3FD;
+    background-color: #3182F7;
+}
+
+.body .body-banners:nth-child(3){
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.body .body-banners:nth-child(3) > i{
+    color: #AEB2B8;
+    cursor: pointer;
+}
