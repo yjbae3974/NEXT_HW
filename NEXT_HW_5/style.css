@@ -1,33 +1,32 @@
-.flex{
+.flex {
     display: flex;
 }
 
-.space-between{
+.space-between {
     justify-content: space-between;
 }
 
-.space-around{
+.space-around {
     justify-content: space-around;
 }
 
-.relative{
+.relative {
     position: relative;
 }
 
-.absolute{
+.absolute {
     position: absolute;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+
     /* position: relative; */
 }
 
-main{
+main {
     width: 400px;
     aspect-ratio: 9 / 19.5;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -36,11 +35,11 @@ main{
     position: relative;
 }
 
-main > div{
+main > div {
     padding: 0px 16px;
 }
 
-main .top-bar{
+main .top-bar {
     padding: 0px;
     position: absolute;
     width: 30%;
@@ -50,10 +49,9 @@ main .top-bar{
     top: 0.8em;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
-main .bottom-bar{
+main .bottom-bar {
     padding: 0px;
     position: absolute;
     width: 40%;
@@ -65,7 +63,7 @@ main .bottom-bar{
     transform: translateX(-50%);
 }
 
-main > .header{
+main > .header {
     padding: 0.75em 1.6em 0.9em 2em;
     display: flex;
     justify-content: space-between;
@@ -73,115 +71,116 @@ main > .header{
     font-weight: 700;
 }
 
-main > .header div:first-child{
+main > .header div:first-child {
     display: flex;
     align-items: center;
 }
 
-main > .header div:nth-child(2){
+main > .header div:nth-child(2) {
     display: flex;
     align-items: center;
-    
 }
 
-main > .header div:nth-child(2) > img{
+main > .header div:nth-child(2) > img {
     width: 1.6em;
-
 }
 
-main > .header div:nth-child(2) > img:nth-child(3){
+main > .header div:nth-child(2) > img:nth-child(3) {
     padding-left: 0.4em;
 }
 
-.toss-body-top{
+.toss-body-top {
     padding: 0.5em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.toss-body-top > img{
+.toss-body-top > img {
     width: 100px;
 }
 
-.toss-body-top > div > i{
+.toss-body-top > div > i {
     font-size: 1.3em;
     color: rgb(150, 150, 150);
     margin-left: 1em;
 }
 
-.body .body-banners{
+.body .body-banners {
     background-color: white;
     border-radius: 1em;
     padding: 1.3em;
     margin: 0.8em 0em;
 }
 
-.body .body-banners > .flex:first-child{
+.body .body-banners > .flex:first-child {
     justify-content: space-between;
 }
 
-.body .body-banners .emoji{
+.body .body-banners .emoji {
     text-align: center;
-     font-size: 60px;
-     margin: 0.7em 0px;
+    font-size: 60px;
+    margin: 0.7em 0px;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(3){
+.body .body-banners:nth-child(2) > div:nth-child(3) {
     color: gray;
     text-align: center;
     font-size: 0.8em;
     font-weight: 500;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(3) b{
-    color: #4479CA;
+.body .body-banners:nth-child(2) > div:nth-child(3) b {
+    color: #4479ca;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(4).flex{
+.body .body-banners:nth-child(2) > div:nth-child(4).flex {
     padding: 1em 0px 0.5em 0px;
     display: flex;
     justify-content: space-between;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button{
-    padding: .8em 3.5em;
+.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button {
+    padding: 0.8em 3.5em;
     border-radius: 1em;
     font-weight: 600;
     cursor: pointer;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button:first-child{
-    color: #3182F7;
-    background-color: #E9F3FD;
+.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button:first-child {
+    color: #3182f7;
+    background-color: #e9f3fd;
 }
-.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button:nth-child(2){
-    color: #E9F3FD;
-    background-color: #3182F7;
+.body
+    .body-banners:nth-child(2)
+    > div:nth-child(4).flex
+    > .button:nth-child(2) {
+    color: #e9f3fd;
+    background-color: #3182f7;
 }
 
-.body .body-banners:nth-child(3){
+.body .body-banners:nth-child(3) {
     justify-content: space-between;
     font-size: 1.1em;
     font-weight: 600;
 }
 
-.body .body-banners:nth-child(3) > i{
-    color: #AEB2B8;
+.body .body-banners:nth-child(3) > i {
+    color: #aeb2b8;
     cursor: pointer;
 }
 
-.body-banners .bank-info.flex{
+.body-banners .bank-info.flex {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
 }
 
-.body-banners .bank-info.flex .absolute.circle{
+.body-banners .bank-info.flex .absolute.circle {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #2E82FA;
+    background-color: #2e82fa;
     font-size: 10px;
     display: flex;
     justify-content: center;
@@ -190,24 +189,24 @@ main > .header div:nth-child(2) > img:nth-child(3){
     right: 0%;
 }
 
-.body-banners .bank-info.flex .flex.space-between{
+.body-banners .bank-info.flex .flex.space-between {
     flex-grow: 1;
 }
 
-.body-banners .bank-info.flex .flex.space-between p{
+.body-banners .bank-info.flex .flex.space-between p {
     margin: 6px;
     margin-left: 16px;
 }
-.body-banners .bank-info.flex .flex.space-between p:nth-child(2){
+.body-banners .bank-info.flex .flex.space-between p:nth-child(2) {
     font-weight: 600;
 }
 
-.body-banners .bank-info.flex .flex.space-between .button{
+.body-banners .bank-info.flex .flex.space-between .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F2F3F5;
-    color: #4D5360;
+    background-color: #f2f3f5;
+    color: #4d5360;
     padding: 2px 14px;
     margin: 6px 0px;
     font-size: 0.8em;
@@ -215,3 +214,13 @@ main > .header div:nth-child(2) > img:nth-child(3){
     font-weight: 600;
     cursor: pointer;
 }
+
+.my-all-points {
+    cursor: pointer;
+    display: flex;
+    border-top: 1px solid #dee3e9;
+    color: #727986;
+    justify-content: center;
+    padding-top: 1em;
+}
+
