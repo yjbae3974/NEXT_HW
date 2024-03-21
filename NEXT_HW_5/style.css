@@ -90,8 +90,9 @@ main > .header div:nth-child(2) > img:nth-child(3) {
 }
 
 .body {
-    height: calc(100% - 142.39px);
+    height: calc(100% - calc(184.09px + 0.8em)); /* toss 41.7px*/
     overflow: scroll;
+    position: relative;
 }
 
 .toss-body-top {
@@ -99,6 +100,7 @@ main > .header div:nth-child(2) > img:nth-child(3) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 16px;
 }
 
 .toss-body-top > img {
@@ -118,6 +120,10 @@ main > .header div:nth-child(2) > img:nth-child(3) {
     margin: 0.8em 0em;
 }
 
+/* .body-banners:nth-child(1) {
+    margin-top: 41.7px;
+} */
+
 .body .body-banners > .flex:first-child {
     justify-content: space-between;
 }
@@ -128,43 +134,43 @@ main > .header div:nth-child(2) > img:nth-child(3) {
     margin: 0.7em 0px;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(3) {
+.body .body-banners:nth-child(1) > div:nth-child(3) {
     color: gray;
     text-align: center;
     font-size: 0.8em;
     font-weight: 500;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(3) b {
+.body .body-banners:nth-child(1) > div:nth-child(3) b {
     color: #4479ca;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(4).flex {
+.body .body-banners:nth-child(1) > div:nth-child(4).flex {
     padding: 1em 0px 0.5em 0px;
     display: flex;
     justify-content: space-between;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button {
+.body .body-banners:nth-child(1) > div:nth-child(4).flex > .button {
     padding: 0.8em 3.5em;
     border-radius: 1em;
     font-weight: 600;
     cursor: pointer;
 }
 
-.body .body-banners:nth-child(2) > div:nth-child(4).flex > .button:first-child {
+.body .body-banners:nth-child(1) > div:nth-child(4).flex > .button:first-child {
     color: #3182f7;
     background-color: #e9f3fd;
 }
 .body
-    .body-banners:nth-child(2)
+    .body-banners:nth-child(1)
     > div:nth-child(4).flex
     > .button:nth-child(2) {
     color: #e9f3fd;
     background-color: #3182f7;
 }
 
-.body .body-banners:nth-child(3) {
+.body .body-banners:nth-child(2) {
     justify-content: space-between;
     font-size: 1.1em;
     font-weight: 600;
@@ -229,6 +235,12 @@ main > .header div:nth-child(2) > img:nth-child(3) {
     padding-top: 1em;
 }
 
+.fa-cc-paypal.absolute {
+    top: 25%;
+    left: 25%;
+    /* color: #2e82fa; */
+}
+
 .footer {
     padding: 0px;
     position: absolute;
@@ -250,4 +262,34 @@ main > .header div:nth-child(2) > img:nth-child(3) {
 .footer .footer-content > p {
     padding-top: 0.4em;
     font-size: 0.8em;
+}
+
+.body-banners > .banner-contents {
+    color: #727986;
+    font-size: 0.9em;
+    padding: 0px 1em;
+    cursor: pointer;
+}
+
+.body-banners > .banner-contents:nth-child(2) {
+    border-left: 1px solid #dee3e9;
+    border-right: 1px solid #dee3e9;
+    padding: 0px 2.5em;
+}
+
+.for-byj p {
+    color: #727986;
+    padding: 0.2em 0em;
+}
+
+.for-byj > p:first-child {
+    color: #727986;
+    font-size: 0.9em;
+}
+
+.for-byj > p:nth-child(2) {
+    color: black;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 1em;
 }
