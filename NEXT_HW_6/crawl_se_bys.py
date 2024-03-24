@@ -23,6 +23,8 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 driver.get('https://www.all-con.co.kr/list/contest/1/3?sortname=cl_order&sortorder=asc&stx=&sfl=&t=1&ct=&sc=&tg=')
 
 
+
+
 # scrl_once = driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
 # scrl_end = driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 # chartbtn.click()
@@ -31,10 +33,10 @@ driver.get('https://www.all-con.co.kr/list/contest/1/3?sortname=cl_order&sortord
 
 time.sleep(3)
 
-# today = datetime.now().strftime('%Y%m%d')
-# file = open(f'{today}진행중인공모전.csv', mode = 'w', newline='')
-# writer = csv.writer(file)
-# writer.writerow(["rank","title","singer"])
+today = datetime.now().strftime('%Y%m%d')
+file = open(f'{today}진행중인공모전.csv', mode = 'w', newline='')
+writer = csv.writer(file)
+writer.writerow(['순번','제목','주체','기간','접수 가능 여부'])
 
 infos = driver.find_elements(By.XPATH, '//*[@id="tbl-list"]/tr/td[1]/a')
 print(infos)
@@ -45,10 +47,10 @@ for i, info in enumerate(infos, start = 1):
     juchae = info.find_element(By.XPATH, f'/html/body/div[2]/div/div/div[3]/table/tbody/tr[{i}]/td[2]').text
     gigan = info.find_element(By.XPATH, f'/html/body/div[2]/div/div/div[3]/table/tbody/tr[{i}]/td[3]').text
     status = info.find_element(By.XPATH, f'/html/body/div[2]/div/div/div[3]/table/tbody/tr[{i}]/td[4]/span').text
-    print(rank, title, juchae, gigan, status)
-    # print(rank, title, singer)
-    #writer.writerow([rank,title,singer])
+    writer.writerow([rank,title,juchae,gigan,status])
+    # print(rank, title, juchae, gigan, status)
 
-#file.close()
+
+file.close()
 
 
