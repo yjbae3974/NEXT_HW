@@ -90,7 +90,7 @@ main > .header div:nth-child(2) > img:nth-child(3) {
 }
 
 .body {
-    height: calc(100% - calc(184.09px + 0.8em)); /* toss 41.7px*/
+    height: calc(100% - 200.09px); /* toss 41.7px*/
     overflow: scroll;
     position: relative;
 }
