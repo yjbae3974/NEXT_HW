@@ -1,0 +1,76 @@
+/* General page styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    color: white;
+    text-align: center;
+    padding: 50px;
+    width: 600px;
+  }
+  
+  /* Background colors for each content */
+  .content.about {
+    background-color: #f2553a; /* Orange */
+  }
+  
+  .content.products {
+    background-color: #4a90e2; /* Blue */
+  }
+  
+  .content.technology {
+    background-color: #50c878; /* Green */
+  }
+  
+  .content.downloads {
+    background-color: #e15f41; /* Red */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    background-color: #333;
+  }
+  
+  .nav-button {
+    flex: 1;
+    width: 25%;
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .nav-button.about{
+    background-color: #f2553a;
+  }
+  .nav-button.products{
+    background-color: #4a90e2;
+  }
+  .nav-button.technology{
+    background-color: #50c878;
+  }
+  .nav-button.downloads{
+    background-color: #e15f41;
+  }
+
+  .nav-button.active {
+    background-color: #f2553a;
+  }
+  
+  .nav-button:hover {
+    background-color: #555;
+  }
+  
