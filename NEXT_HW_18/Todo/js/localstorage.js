@@ -7,17 +7,16 @@ const setUserName = () =>{
     checkUserName()
 }
 
-const checkUserName = () =>{
-    const checkName = window.localStorage.getItem('username')
+const checkUserName = () => {
+    const checkName = window.localStorage.getItem('username');
     if(checkName){
-        header.classList.toggle('hidden')
-        usernameWrapper.classList.toggle('hidden')
-        header.innerHTML = `${checkName}의 Todo List <button style="width: 10%" type="button" onclick="resetUserName()">초기화</button>`
-
+        header.classList.remove('hidden'); // hidden 클래스를 제거하고
+        usernameWrapper.classList.add('hidden'); // username 입력을 숨깁니다.
+        header.innerHTML = `${checkName}의 Todo List <button style="width: 10%" type="button" onclick="resetUserName()">초기화</button>`;
     }
     else{
-        header.classList.toggle('hidden')
-        usernameWrapper.classList.toggle('hidden')
+        header.classList.add('hidden'); // header를 숨기고
+        usernameWrapper.classList.remove('hidden'); // username 입력을 보여줍니다.
     }
 }
 
@@ -28,3 +27,5 @@ const resetUserName = () =>{
     checkUserName();
 
 }
+
+window.addEventListener('load', checkUserName);
