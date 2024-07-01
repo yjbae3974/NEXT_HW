@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#root > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: beige;
+}
+
+.create-todo {
+  display: flex;
+  margin-top: 20px;
+  width: 80%;
+}
+.create-todo input {
+  width: 70%;
+  border-radius: 5px;
+  height: 30px;
+}
+.create-todo > div {
+  width: 20%;
+}
+.create-todo > div input {
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+}
+.create-todo > button {
+  width: 10%;
+  border-radius: 5px;
+  height: 100%;
+}
+
+/* Todo.scss */
+div.todo-container {
+  list-style-type: none;
+  padding: 0;
+  width: 70%;
+}
+div.todo-container li {
+  position: relative;
+  left: -30px;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.todo-container li .todo-text {
+  flex: 1;
+  width: 100%;
+}
+div.todo-container li input {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+div.todo-container li .date-picker {
+  margin-right: 10px;
+}
+div.todo-container li button {
+  background-color: #666; /* Neutral gray background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+div.todo-container li button:hover {
+  background-color: #555; /* Darker gray on hover */
+}
+div.todo-container li button.delete-button {
+  background-color: #d9534f; /* Bootstrap danger color */
+}
+div.todo-container li button.delete-button:hover {
+  background-color: #c9302c; /* Darker danger color on hover */
+}
+div.todo-container li button.update-button {
+  background-color: #5bc0de; /* Bootstrap info color */
+}
+div.todo-container li button.update-button:hover {
+  background-color: #31b0d5; /* Darker info color on hover */
+}/*# sourceMappingURL=style.css.map */
