@@ -13,6 +13,8 @@ const cities = {
   'Singapore': { lat: 1.3521, lon: 103.8198 },
 };
 
+console.log('cities:', cities);
+
 function App() {
   const [weatherData, setWeatherData] = useState([]);
   const [loading, setLoading] = useState(false);
