@@ -44,6 +44,7 @@ function App() {
                 deleteTodo={deleteTodo}
                 updateTodo={updateTodo}
             />
+            
         </div>
     );
 }
