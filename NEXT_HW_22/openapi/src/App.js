@@ -22,6 +22,7 @@ function App() {
   const [endDate, setEndDate] = useState('2024-07-06');
   const [change, setChange] = useState(false);
   useEffect(() => {
+    console.log(process.env.REACT_APP_OPENWEATHER_API_KEY)
     const fetchWeatherData = async () => {
       setLoading(true);
       try {
@@ -32,7 +33,7 @@ function App() {
             params: {
               lat,
               lon,
-              appid: '0800b7284eaa0e1d4c53d1d70d9de5d3', // Replace 'YOUR_API_KEY' with your actual API key
+              appid: process.env.REACT_APP_OPENWEATHER_API_KEY, // Replace 'YOUR_API_KEY' with your actual API key
               units: 'metric'
             }
           }
